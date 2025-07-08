@@ -2,7 +2,7 @@
 try {
     $users = "user";
     $pass = "motdepasse";
-    $bdd = new PDO('mysql:host=localhost;dbname=lampbdd;charset=utf8', $users, $pass, [
+    $bdd = new PDO('mysql:host=localhost;dbname=projetJoan;charset=utf8', $users, $pass, [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
     ]);
