@@ -2,14 +2,14 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Livre d'Or du Restaurant</title>
+    <title>Livre d'Or du Restaurant Japonais de Onigiri</title>
     <link rel="stylesheet" href="public/style.css">
 </head>
 <body>
 <header class="header">
     <div class="logo">
-        <h1>🍽️ Restaurant Le Délice</h1>
-        <p class="slogan">“Laissez-nous un mot, comme on vous laisse une émotion.”</p>
+        <h1>🍽️ Restaurant Fukoeka</h1>
+        <p class="slogan">“Partagez votre expérience, afin que les autres puissent partager également le plaisir de nos plats”</p>
     </div>
     <nav class="navbar">
         <ul>
