@@ -10,7 +10,6 @@ $signatures = recupererSignatures();
     <h2>💬 Livre d'Or</h2>
 
     <form method="POST" action="./controller/livreDorController.php" class="form-signature">
-        <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
 
         <label for="nom">Votre nom :</label>
         <input type="text" name="nom" id="nom" required>
@@ -31,6 +30,10 @@ $signatures = recupererSignatures();
         <label for="message">Votre message :</label>
         <textarea name="message" id="message" rows="4" required></textarea>
 
+         <!-- CAPTCHA Google -->
+        <div class="g-recaptcha" data-sitekey="6LdEJX0rAAAAAIxc25vev98hdk9d54x3k27f1tnN"></div>
+        <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
+
         <button type="submit">🖊️ Signer</button>
     </form>
 
@@ -41,5 +44,7 @@ $signatures = recupererSignatures();
             <p><?= nl2br(htmlspecialchars($sig["Message"] ?? "", ENT_QUOTES, 'UTF-8')) ?></p>
             <em>Posté le <?= date("d/m/Y à H:i", strtotime($sig["Date_Signature"])) ?></em>
         </div>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <?php endforeach; ?>
 </main>
